@@ -1888,7 +1888,7 @@ static void ec20_urc_qmtrurc_func(struct at_client *client, const char *data, rt
 
                         /*读取信号的值*/
                         at_response_t resp;
-                        resp = at_create_resp(64, 0, rt_tick_from_millisecond(5000));
+                        resp = at_create_resp(256, 0, rt_tick_from_millisecond(5000));
                          //  if (at_obj_exec_cmd((client), (resp), (cmd)) < 0)
                         at_obj_exec_cmd(at_client_get_first(), resp,"AT+CSQ");
                         at_resp_parse_line_args_by_kw(resp, "+CSQ:", "+CSQ: %d,%d", &signalstrength[0], &signalstrength[1]);
