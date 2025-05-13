@@ -140,9 +140,9 @@ char num[]= {0};
 
 
 char *retain = "0";
-char *topic ="\"test\"";/*1*/
-char *sendtopic ="\"test\"";/*2*/
-char *recvtopic ="\"test\"";/*1*/
+char *topic ="\"hhgj1\"";/*1*/
+char *sendtopic ="\"hhgj2\"";/*2*/
+char *recvtopic ="\"hhgj1\"";/*1*/
 char receivetopic[10]= {0};
 int ret =0;
 int retsum = 0;
@@ -164,7 +164,7 @@ char *equals = "=";
 /*char *host_name ="\"post-cn-i7m2fwizj12.mqtt.aliyuncs.com\"";     这个是可用的
 char *port = "1883";*/
 
-char *host_name ="\"post-cn-omn3o8zvu01.mqtt.aliyuncs.com\"";
+char *host_name ="\"post-cn-tl32m9urp0e.mqtt.aliyuncs.com\"";
 char *port = "1883";
 
 /*char *clientid ="\"GID_test@@@3\"";
@@ -175,11 +175,9 @@ char *Password ="\"jtAlQh0OLLr8y4IkOmXAjqgBWv8=\"";*/
 char *Username ="\"Signature|LTAI5t6E7XoRLUt4ewRupXA5|post-cn-i7m2fwizj12\"";
 char *Password ="\"d5vqVLKa3cW+ngDuru69jCotxqY=\"";*/
 
-char *clientid ="\"GID_001@@@test_topic\"";
-char *Username ="\"Signature|LTAI5tJeLqp6F7DvqVxJiqpu|post-cn-omn3o8zvu01\"";
-char *Password ="\"WY2pdjSPiDl6Q3WkN6i6jP5y7W3zY1\"";
-
-
+char *clientid ="\"GID_huihuang@@@sdns6450\"";
+char *Username ="\"Signature|LTAI5t8DoNt9hijy4g8WovbX|post-cn-tl32m9urp0e\"";
+char *Password ="\"vdt525h2DUk+0uHZRbc1lt6+1Vc=\"";
 
 /*下面是使用张总的账户了--------------------------------------------------------------------------------------*/
 //char *host_name ="\"post-cn-tl32m9urp0e.mqtt.aliyuncs.com\"";
@@ -1888,7 +1886,7 @@ static void ec20_urc_qmtrurc_func(struct at_client *client, const char *data, rt
 
                         /*读取信号的值*/
                         at_response_t resp;
-                        resp = at_create_resp(256, 0, rt_tick_from_millisecond(5000));
+                        resp = at_create_resp(64, 0, rt_tick_from_millisecond(5000));
                          //  if (at_obj_exec_cmd((client), (resp), (cmd)) < 0)
                         at_obj_exec_cmd(at_client_get_first(), resp,"AT+CSQ");
                         at_resp_parse_line_args_by_kw(resp, "+CSQ:", "+CSQ: %d,%d", &signalstrength[0], &signalstrength[1]);
@@ -2086,17 +2084,8 @@ int ConnectToCloud(char* hostname,char* portnumber,char* clientid,char* username
     rt_thread_mdelay(200);
 
     resp = at_create_resp(256, 0, rt_tick_from_millisecond(5000));
-    // GID_001
 
-//     accessKey = ''
-
-// #账号secre 从阿里云账号控制台获取
-// secre = ''
-   /* AT+QMTCONN=0,"GID_001@@@test_topic","Signature|LTAI5tJeLqp6F7DvqVxJiqpu|post-cn-i7m2fwizj12","WY2pdjSPiDl6Q3WkN6i6jP5y7W3zY1=" */
-    
-    
-    /* AT+QMTCONN=0,"GID_test@@@FactoryOnIot","Signature|LTAI5t6E7XoRLUt4ewRupXA5|post-cn-i7m2fwizj12","gLtwTxFNsiqnGg2KJfWkSNGFTBI=" */
-
+   /* AT+QMTCONN=0,"GID_test@@@FactoryOnIot","Signature|LTAI5t6E7XoRLUt4ewRupXA5|post-cn-i7m2fwizj12","gLtwTxFNsiqnGg2KJfWkSNGFTBI=" */
    char*cmd = (char *)malloc(strlen(QMTCONNcmd)+strlen(equals)+strlen(cliend_idx)+strlen(",")
                                  +strlen(clientid)+strlen(",")+strlen(username)+strlen(",")+strlen(password));
    sprintf(cmd, "%s=%s,%s,%s,%s", QMTCONNcmd,cliend_idx,clientid,username,password);
