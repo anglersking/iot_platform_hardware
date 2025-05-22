@@ -140,9 +140,9 @@ char num[]= {0};
 
 
 char *retain = "0";
-char *topic ="\"hhgj1\"";/*1*/
-char *sendtopic ="\"hhgj2\"";/*2*/
-char *recvtopic ="\"hhgj1\"";/*1*/
+char *topic ="\"test1\"";/*1*/
+char *sendtopic ="\"test2\"";/*2*/
+char *recvtopic ="\"test1\"";/*1*/
 char receivetopic[10]= {0};
 int ret =0;
 int retsum = 0;
@@ -163,8 +163,7 @@ char *equals = "=";
 /*--------------------以下连接到云服务器的一些参数---------------------------*/
 /*char *host_name ="\"post-cn-i7m2fwizj12.mqtt.aliyuncs.com\"";     这个是可用的
 char *port = "1883";*/
-
-char *host_name ="\"post-cn-tl32m9urp0e.mqtt.aliyuncs.com\"";
+char *host_name ="\"post-cn-omn3o8zvu01.mqtt.aliyuncs.com\"";
 char *port = "1883";
 
 /*char *clientid ="\"GID_test@@@3\"";
@@ -175,19 +174,19 @@ char *Password ="\"jtAlQh0OLLr8y4IkOmXAjqgBWv8=\"";*/
 char *Username ="\"Signature|LTAI5t6E7XoRLUt4ewRupXA5|post-cn-i7m2fwizj12\"";
 char *Password ="\"d5vqVLKa3cW+ngDuru69jCotxqY=\"";*/
 
-char *clientid ="\"GID_huihuang@@@sdns6450\"";
-char *Username ="\"Signature|LTAI5t8DoNt9hijy4g8WovbX|post-cn-tl32m9urp0e\"";
-char *Password ="\"vdt525h2DUk+0uHZRbc1lt6+1Vc=\"";
+char *clientid ="\"GID_001@@@sdns6450\"";
+char *Username ="\"Signature|LTAI5tRZtqqAqtnE3oph7QSd|post-cn-omn3o8zvu01\"";
+char *Password ="\"iHx4PGCQoCop3ZbJzhynDNgDqulYyE\"";
 
 /*下面是使用张总的账户了--------------------------------------------------------------------------------------*/
-//char *host_name ="\"post-cn-tl32m9urp0e.mqtt.aliyuncs.com\"";
+//char *host_name ="\"post-cn-omn3o8zvu01.mqtt.aliyuncs.com\"";
 
 /*char *clientid ="\"GID_test@@@3\"";
-char *Username ="\"Signature|LTAI5t8DoNt9hijy4g8WovbX|post-cn-tl32m9urp0e\"";
+char *Username ="\"Signature|LTAI5tRZtqqAqtnE3oph7QSd|post-cn-omn3o8zvu01\"";
 char *Password ="\"qF0YmQM7prFM2Cl2U/Edk3v4tuw=\"";*/
 
 /*char *clientid ="\"GID_test@@@1\"";
-char *Username ="\"Signature|LTAI5t8DoNt9hijy4g8WovbX|post-cn-tl32m9urp0e\"";
+char *Username ="\"Signature|LTAI5tRZtqqAqtnE3oph7QSd|post-cn-omn3o8zvu01\"";
 char *Password ="\"gbr3EoWVKUy/ZIECeN5vqBOfVrk=\"";*/
 
 /*--------------------以上连接到云服务器的一些参数---------------------------*/
