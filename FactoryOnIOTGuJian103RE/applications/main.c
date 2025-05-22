@@ -176,7 +176,7 @@ char *Password ="\"d5vqVLKa3cW+ngDuru69jCotxqY=\"";*/
 
 char *clientid ="\"GID_001@@@sdns6450\"";
 char *Username ="\"Signature|LTAI5tRZtqqAqtnE3oph7QSd|post-cn-omn3o8zvu01\"";
-char *Password ="\"iHx4PGCQoCop3ZbJzhynDNgDqulYyE\"";
+char *Password ="\"JHfwOHeujOgogJxnpAQuzVGG76I=\"";
 
 /*下面是使用张总的账户了--------------------------------------------------------------------------------------*/
 //char *host_name ="\"post-cn-omn3o8zvu01.mqtt.aliyuncs.com\"";
